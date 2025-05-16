@@ -23,9 +23,6 @@ body{
     box-sizing: border-box;
     flex-grow: 1;
 
-    max-height: 10%;
-    min-width: 10%;
-
     border-width: 1px;
     border-style: solid;
     background-color: white;
