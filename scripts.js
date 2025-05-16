@@ -1,6 +1,6 @@
 const GRID_ROWS = 10;
 const GRID_COLUMNS = 10;
-const container = document.querySelector("#container");
+const container = document.querySelector("#gridContainer");
 
 function createGrid(){
     for(let i = 0; i < GRID_ROWS; i++){
@@ -15,6 +15,14 @@ function createGrid(){
     }
 }
 
+function changeColor(clickedSquare){
+    this.style.backgroundColor = "black";
+}
+
 createGrid();
 
 const square = document.querySelectorAll(".grid");
+
+square.forEach((square) =>{
+    square.addEventListener("mouseenter", changeColor);
+});

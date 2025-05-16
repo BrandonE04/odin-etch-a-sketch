@@ -1,14 +1,17 @@
 *{
     margin: 0px;
-    background-color: green;
 }
 body{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
-#container{
+#gridContainer{
     height: 500px;
     width: 500px;
+}
+#newGrid{
+    margin: 10px 0px;
 }
 .row{
     display: flex;
@@ -20,8 +23,8 @@ body{
     box-sizing: border-box;
     flex-grow: 1;
 
-    max-height: 1/10;
-    min-width: 1/10;
+    max-height: 10%;
+    min-width: 10%;
 
     border-width: 1px;
     border-style: solid;
