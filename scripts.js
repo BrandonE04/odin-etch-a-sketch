@@ -1,5 +1,5 @@
-let gridRows = 10;
-let gridColumns = 10;
+let gridRows = 16;
+let gridColumns = 16;
 const container = document.querySelector("#gridContainer");
 const newGrid = document.querySelector("#newGrid");
 
