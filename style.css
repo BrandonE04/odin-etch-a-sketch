@@ -16,7 +16,7 @@ body{
 .row{
     display: flex;
     flex-wrap: wrap;
-    min-height: 10%;
+    min-height: 1%;
     min-width: 100%;
 }
 .grid{

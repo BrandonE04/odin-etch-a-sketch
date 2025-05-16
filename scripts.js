@@ -1,5 +1,5 @@
-const GRID_ROWS = 10;
-const GRID_COLUMNS = 10;
+let gridRows = 10;
+let gridColumns = 10;
 const container = document.querySelector("#gridContainer");
 const newGrid = document.querySelector("#newGrid");
 
@@ -9,10 +9,12 @@ let rows = document.querySelectorAll(".row");
 addSquareEvents();
 
 function createGrid(){
-    for(let i = 0; i < GRID_ROWS; i++){
+    for(let i = 0; i < gridRows; i++){
         const outerSquare = document.createElement("div");
+        let minHeight = 100/gridRows;
+        outerSquare.style.minHeight = `${minHeight}%`;
         outerSquare.classList.add("row");
-        for(let o = 0; o < GRID_COLUMNS; o++){
+        for(let o = 0; o < gridColumns; o++){
             const gridSquare = document.createElement("div");
             gridSquare.classList.add("grid");
             outerSquare.appendChild(gridSquare);
@@ -26,6 +28,13 @@ function createGrid(){
 newGrid.addEventListener("click", refreshGrid);
 
 function refreshGrid(){
+    let size = prompt("Enter the size of the grid: ");
+
+    if(size > 100)
+        size = 100;
+
+    gridColumns = size;
+    gridRows = size;
     for(row of rows){
         container.removeChild(row);
     }
